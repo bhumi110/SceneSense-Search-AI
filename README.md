@@ -1,4 +1,4 @@
-# 🎬 CineSense AI
+# 🎬 SceneSense AI
 ### AI-Powered Semantic Movie Retrieval using Transformer Embeddings & FAISS
 
 <p align="center">
@@ -7,13 +7,12 @@
 ![Sentence Transformers](https://img.shields.io/badge/SentenceTransformers-MiniLM-orange)
 ![FAISS](https://img.shields.io/badge/FAISS-Vector_Search-green)
 ![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red?logo=streamlit)
-![License](https://img.shields.io/badge/License-MIT-success)
 
 </p>
 
 ---
 
-# 📖 Overview
+## Overview
 
 Finding a movie based only on a vague memory is difficult.
 
@@ -24,26 +23,26 @@ Traditional streaming platforms primarily rely on **movie titles, actors, genres
 - *"Friends reunite after many years."*
 - *"A detective solves a mysterious murder."*
 
-**CineSense AI** solves this problem using **Semantic Search**.
+**SceneSense AI** solves this problem using **Semantic Search**.
 
 Instead of matching keywords, the system understands the **meaning** of the user's query using **Sentence Transformers** and retrieves the most semantically relevant movies using **FAISS Vector Search**.
 
 ---
 
-# ✨ Features
+## Features
 
-- 🔍 Natural Language Movie Search
-- 🧠 Semantic Understanding using Transformer Embeddings
-- ⚡ Fast Vector Similarity Search using FAISS
-- 📊 Match Percentage Scoring
-- 🎬 Movie Metadata Display
-- 📖 Human-written Plot Summaries
-- 🚫 Intelligent "No Results Found" Handling
-- 🌐 Interactive Streamlit Interface
+- Natural Language Movie Search
+- Semantic Understanding using Transformer Embeddings
+- Fast Vector Similarity Search using FAISS
+- Match Percentage Scoring
+- Movie Metadata Display
+- Human-written Plot Summaries
+- Intelligent "No Results Found" Handling
+- Interactive Streamlit Interface
 
 ---
 
-# 🎯 Example Search
+## Example Search
 
 ### User Query
 
@@ -61,7 +60,7 @@ A father sacrifices himself for his family.
 
 ---
 
-# 🏗 System Architecture
+## System Architecture
 
 ```
                     User Query
@@ -85,7 +84,7 @@ A father sacrifices himself for his family.
 
 ---
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
 | Category | Technology |
 |----------|------------|
@@ -100,7 +99,7 @@ A father sacrifices himself for his family.
 
 ---
 
-# 📂 Project Structure
+## Project Structure
 
 ```
 SceneSense/
@@ -113,7 +112,7 @@ SceneSense/
 ├── data/
 │     ├── raw/
 │     └── processed/
-│            processed.csv
+│            processed_movies.csv
 │
 ├── models/
 │     ├── movie_embeddings.npy
@@ -133,7 +132,7 @@ SceneSense/
 
 ---
 
-# 📊 Dataset
+## Dataset
 
 The project uses a **Movie Scripts Corpus**.
 
@@ -150,7 +149,7 @@ Important fields:
 
 ---
 
-# 🧹 Data Preprocessing
+## Data Preprocessing
 
 Before generating embeddings, the dataset was cleaned using **Pandas**.
 
@@ -165,12 +164,12 @@ Before generating embeddings, the dataset was cleaned using **Pandas**.
 Output:
 
 ```
-processed.csv
+processed_movies.csv
 ```
 
 ---
 
-# 🧠 Semantic Embedding Generation
+## Semantic Embedding Generation
 
 Every movie plot is converted into a dense numerical vector using the pre-trained transformer model:
 
@@ -198,7 +197,7 @@ movie_embeddings.npy
 
 ---
 
-# 🚀 Why Sentence Transformers?
+## Why Sentence Transformers?
 
 Traditional approaches like **TF-IDF** only compare words.
 
@@ -216,11 +215,11 @@ For example,
 
 Although the wording is different, the embeddings are highly similar.
 
-This allows CineSense AI to retrieve movies based on **meaning rather than exact keywords**.
+This allows SceneSense AI to retrieve movies based on **meaning rather than exact keywords**.
 
 ---
 
-# ⚡ Semantic Search
+## Semantic Search
 
 Initially, semantic retrieval was implemented using cosine similarity.
 
@@ -243,7 +242,7 @@ Although accurate, searching every movie embedding sequentially becomes slower a
 
 ---
 
-# ⚡ Vector Search using FAISS
+## Vector Search using FAISS
 
 To improve scalability and search speed, cosine similarity was replaced by **FAISS**.
 
@@ -277,7 +276,7 @@ Benefits
 
 ---
 
-# 🔎 Search Pipeline
+## Search Pipeline
 
 ```
 User Query
@@ -306,7 +305,7 @@ Streamlit Interface
 
 ---
 
-# 📊 Match Score
+## Match Score
 
 Raw cosine similarity values are converted into a more user-friendly percentage.
 
@@ -328,7 +327,7 @@ Displayed as
 
 ---
 
-# 🚫 No Match Handling
+## No Match Handling
 
 If none of the retrieved movies exceed a predefined similarity threshold, the application displays:
 
@@ -342,7 +341,7 @@ This avoids returning irrelevant recommendations.
 
 ---
 
-# 📖 Movie Summary
+## Movie Summary
 
 Instead of generating summaries using a text summarization model, the project utilizes the existing **Plot Outline** available in the dataset.
 
@@ -355,7 +354,7 @@ Reasons:
 
 ---
 
-# 💻 Streamlit Interface
+## Streamlit Interface
 
 The application provides a clean and minimal interface.
 
@@ -369,44 +368,42 @@ Each search result displays:
 
 ---
 
-# 📁 Generated Files
+## Generated Files
 
-## Processed Dataset
+### Processed Dataset
 
 ```
-processed.csv
+processed_movies.csv
 ```
 
-## Movie Embeddings
+### Movie Embeddings
 
 ```
 movie_embeddings.npy
 ```
 
-## FAISS Index
+### FAISS Index
 
 ```
 movie_index.faiss
 ```
 
-## Sentence Transformer Model
+### Sentence Transformer Model
 
 ```
 sentence_model/
 ```
 
-(Optional local cache)
-
 ---
 
-# ⚙ Installation
+## ⚙ Installation
 
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/CineSense-AI.git
+git clone https://github.com/bhumi110/SceneSense-Search-AI.git
 
-cd CineSense-AI
+cd SceneSense-AI
 ```
 
 Create virtual environment
@@ -437,7 +434,7 @@ streamlit run app/app.py
 
 ---
 
-# 📦 Libraries Used
+## Libraries Used
 
 | Library | Purpose |
 |----------|---------|
@@ -450,7 +447,7 @@ streamlit run app/app.py
 
 ---
 
-# ⚡ Why FAISS Instead of Cosine Similarity?
+## Why FAISS Instead of Cosine Similarity?
 
 | Cosine Similarity | FAISS |
 |-------------------|--------|
@@ -461,21 +458,7 @@ streamlit run app/app.py
 
 ---
 
-# 📈 Future Improvements
-
-- 🎬 Scene-level semantic search using movie scripts or subtitles
-- 🤖 Personalized movie recommendations
-- 😊 Emotion and theme classification
-- 🎭 Multi-label movie tagging
-- 🖼 Poster-based visual search using CLIP embeddings
-- 🎙 Voice-based movie search
-- 🌍 Multilingual semantic retrieval
-- ☁ Cloud deployment with FastAPI backend
-- 🔄 Hybrid recommendation engine combining semantic and collaborative filtering
-
----
-
-# 🎯 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates practical implementation of:
 
@@ -490,17 +473,7 @@ This project demonstrates practical implementation of:
 
 ---
 
-# 🚀 Resume Highlights
-
-- Developed an AI-powered semantic movie retrieval engine capable of understanding natural language queries.
-- Generated transformer-based sentence embeddings using **all-MiniLM-L6-v2** for semantic similarity search.
-- Implemented high-performance vector retrieval using **FAISS**, significantly improving search scalability.
-- Built an interactive Streamlit application with intelligent similarity scoring and no-match handling.
-- Designed an end-to-end NLP pipeline including data preprocessing, embedding generation, vector indexing, and semantic retrieval.
-
----
-
-# 📚 References
+## References
 
 - Sentence Transformers: https://www.sbert.net/
 - Hugging Face Transformers: https://huggingface.co/
@@ -510,4 +483,4 @@ This project demonstrates practical implementation of:
 
 ---
 
-# ⭐ If you found this project interesting, consider giving it a star!
+### ⭐ If you found this project interesting, consider giving it a star!
