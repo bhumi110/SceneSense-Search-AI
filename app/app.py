@@ -10,7 +10,7 @@ st.title("🎬 SceneSense AI")
 st.caption("Find movies using natural language")
 
 st.write(
-    "Describe a scene, emotion, theme, or storyline and CineSense AI "
+    "Describe a scene, emotion, theme, or storyline and SceneSense AI "
     "will find the most semantically similar movies."
 )
 
