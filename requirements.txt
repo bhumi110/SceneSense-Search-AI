@@ -1,0 +1,12 @@
+streamlit
+sentence-transformers #sentence embeddings
+transformers
+datasets
+faiss-cpu #similarity search
+pandas
+numpy
+scikit-learn
+matplotlib
+fastapi
+uvicorn
+python-dotenv
