@@ -6,7 +6,7 @@ movies = pd.read_csv("data/processed/processed_movies.csv")
 
 index = faiss.read_index("models/movie_index.faiss")
 
-model = SentenceTransformer("models/sentence_model")
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
 
 def search_movies(query, k=5):
